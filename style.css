@@ -1,0 +1,60 @@
+
+body {
+    background: #F5F5F5;
+    padding-top: 1%;
+    padding-left: 10%;
+}
+
+fieldset
+{
+
+margin:0;padding:0;border:0;outline:0;
+
+}
+
+#add
+{
+	background: #808080;
+	width:65px;height:66px;
+	color: #000000;
+	font-style:italic;
+	font-family:"Verdana";	
+	font-weight:bold;
+}
+
+#todo
+{ 
+width:126px;
+height:100px; 
+}
+
+
+.todo_group{width:526px;height:300px;background:white;margin:.5em auto;position:relative;color:#FF0000;border:solid 16px #616D7E;}
+
+ input.input_style{outline:none;width:422px;margin:4px 0 0 13px;background:none;border:none;height:70px;font-size:32px;color:#c63;}
+
+ .input_group{width:526px;height:100px;background:white;margin:.5em auto;position:relative;color:#FF0000;border:solid 16px #616D7E;}
+
+ .input_group label{position:absolute;top:23px;left:13px;font-size:32px;}
+ .input_group label.focus{color:#eee;}
+ .input_group input.btn{min-width:65px;height:66px;padding:14px;border:none;background:#1c1717;color:white;position:absolute;top:5px;left:431px;}
+ .input_group input.btn:hover{background:#c93620;-webkit-transition:all .1s ease-in-out;}
+
+
+ul {
+    margin: 15px auto 0;
+    padding: 0;
+    width: 545px;
+}
+ul li {
+    list-style-type: none;
+    font-size: 24px;
+    cursor: move;
+    background-color: #efefef;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-align: left;
+}
+ul li span {
+    cursor: text;
+}
