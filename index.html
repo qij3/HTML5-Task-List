@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css" />
+
+  <title>
+    TO-DO List
+  </title>   
+
+<script type="text/javascript">
+
+begin=true;
+
+var values = new Array();
+
+function start()
+{
+	
+	
+	
+		var y=prompt("please enter your name", "");
+		var tnode1=document.createTextNode(""+y+ "'s Personal checklist ");
+		tnode=document.getElementById("for");
+		tnode.appendChild(tnode1);		
+		
+		try{		
+		
+					
+				var key=localStorage.key(i);
+				var value=localStorage[key];
+				value = value.split(",");
+				for(var i=0; i<value.length; i++)		
+			 	 {
+					var show=document.getElementById("show-items");
+					var list=document.createElement('li');
+					var textnode=document.createTextNode(value[i]);
+					list.appendChild(textnode);
+					show.appendChild(list); 			
+				}		
+		}
+		catch(e)
+		{}		
+	
+}
+
+
+
+function Addtask()
+{
+	
+	var task=document.getElementById("task");	
+	values.push(task.value);		
+	values.push(localStorage.itemId);	
+	try{
+	localStorage.setItem("itemId", values); //store the item in the database
+	}
+	catch(e)
+	{}
+	var show=document.getElementById("show-items");
+	var list=document.createElement('li');
+	var textnode=document.createTextNode(task.value);
+	list.appendChild(textnode);
+	show.appendChild(list); 
+	
+	
+}
+
+</script>
+
+
+</head>
+
+<body onload="start()">
+
+  <header>
+	<center> <h1 id="for" ></h1></center>      
+	</header>
+	
+  
+       <form>
+             
+		   <div class="input_group">
+                    <input type="text" class="input_style" id="task" name="task" value="" autocomplete="off" />
+                    <input type="button" id="add" value="Add" onclick=Addtask(this)></input>
+
+                </div>  
+        </form>
+
+<div class="TaskList">
+	<ul id="show-items">
+	</ul>
+</div>       
+
+<footer>
+
+</footer>
+
+ <ul>
+        </ul>   
+  
+  
+</body>
+    
+</html>
+          
