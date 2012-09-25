@@ -1,27 +1,26 @@
-
+				
 <!DOCTYPE HTML>
+
 <html>
 <head>
 
 <link rel="stylesheet" href="style.css" />
+
+<!-- Google Fonts taken from - https://developers.google.com/webfonts/ -->
+<link href=
+'http://fonts.googleapis.com/css?family=Poiret+One|Dr+Sugiyama|Happy+Monkey'
+rel='stylesheet' type='text/css' />
 <script type="text/javascript" src="DOMNode.js"></script> 
-  <title>
-    TO-DO List
-  </title>   
+  
+<title>TO-DO List</title>   
 
 </head>
-
 <body onload="start()">
-
-  <header>
-	<center> <h1 id="for" ></h1></center>      
-	</header>
-	
-  
+<center><h1 class="main-head">Personal Checklist</h1></center>
        <form>
              
 		   <div class="input_group">
-                    <input type="text" class="input_style" id="task" name="task" value="" autocomplete="off" />
+                    <input type="text" class="input_style" id="task" name="task" onkeydown="if (event.keyCode == 13) document.getElementById('add').click()" value="" autocomplete="off" />
                     <input type="button" id="add" value="Add" onclick=Addtask(this)></input>
 
                 </div>  
@@ -29,19 +28,12 @@
 
 <div>
 	<ul id="show-items">
-	<li style="border: 5px solid;font-size: 40px; text-align: center;">Tasks</li>	
-	<li>
-	dbms assignment
-	<br/>
-	<img src="x.png" height="22" width="22" />	
-	</img>
-	
-	</li>
+	<li style="border: 5px solid;font-size: 40px; font-family: 'Dr Sugiyama', cursive; text-align: center;">Tasks</li>	
 	</ul>
 	
 	
-	<ul id="schedule">
-	<li style="border: 5px solid;font-size: 40px;text-align: center;">
+	<ul id="completed">
+	<li style="border: 5px solid;font-size: 40px; font-family: 'Dr Sugiyama', cursive;text-align: center;">
 	Completed	
 	</li>
 	</ul>	

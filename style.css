@@ -1,8 +1,17 @@
 
 body {
-    background: #F5F5F5;
-    padding-top: 1%;
+    background: #808080;
     padding-left: 10%;
+    padding-right: 10%;
+}
+.main-head {
+	background: #F0FFF0;
+	display:block;
+	font-family: 'Poiret One', cursive;
+	font-size: 86px;
+	padding-top: 0px;
+	padding-bottom: 10px;	
+		
 }
 
 fieldset
@@ -17,11 +26,19 @@ margin:0;padding:0;border:0;outline:0;
 	background: #808080;
 	width:65px;height:66px;
 	color: #000000;
-	font-style:italic;
-	font-family:"Verdana";	
+	font-family: 'Poiret One', cursive;	
 	font-weight:bold;
 }
 
+#completed
+{
+    float:right;
+    border: 0px solid;
+    margin: 30px auto 0;
+    padding: 0;
+    width: 445px;
+
+}
 #todo
 { 
 width:126px;
@@ -42,19 +59,21 @@ height:100px;
 
 
 ul {
-    margin: 15px auto 0;
+    float:left;
+    border: 0px solid;
+    margin: 30px auto 0;
     padding: 0;
-    width: 545px;
+    width: 445px;
 }
 ul li {
     list-style-type: none;
-    font-size: 24px;
+    font-size: 20px;
     cursor: move;
     background-color: #efefef;
     margin-bottom: 5px;
     padding: 10px;
     text-align: left;
+    font-family: 'Poiret One', cursive;
+
 }
-ul li span {
-    cursor: text;
-}
+
